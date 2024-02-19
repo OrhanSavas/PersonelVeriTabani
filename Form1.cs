@@ -19,6 +19,19 @@ namespace DataProje1
         }
 
         SqlConnection baglanti = new SqlConnection("Data Source=Dante\\SQLEXPRESS;Initial Catalog=PersonelVeriTabani;Integrated Security=True;Encrypt=False;");
+
+        void temizle()
+        {
+            Txtid.Text = "";
+            TxtAd.Text = "";
+            TxtSoyad.Text = "";
+            TxtMeslek.Text = "";
+            MskMaaş.Text = "";
+            CmbSehir.Text = "";
+            radioButton1.Checked = false;
+            radioButton2.Checked = false;
+            TxtAd.Focus();
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             this.tbl_PersonelTableAdapter.Fill(this.personelVeriTabaniDataSet.Tbl_Personel);
@@ -52,6 +65,11 @@ namespace DataProje1
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
             label8.Text = "False";
+        }
+
+        private void BtnTemizle_Click(object sender, EventArgs e)
+        {
+            temizle();
         }
     }
 }
