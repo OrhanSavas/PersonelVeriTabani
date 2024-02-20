@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.MskMaaş = new System.Windows.Forms.MaskedTextBox();
+            this.MskMaas = new System.Windows.Forms.MaskedTextBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
@@ -80,7 +80,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.MskMaaş);
+            this.groupBox1.Controls.Add(this.MskMaas);
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Controls.Add(this.label6);
@@ -111,14 +111,14 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "Maaş:";
             // 
-            // MskMaaş
+            // MskMaas
             // 
-            this.MskMaaş.Location = new System.Drawing.Point(107, 166);
-            this.MskMaaş.Mask = "0000";
-            this.MskMaaş.Name = "MskMaaş";
-            this.MskMaaş.Size = new System.Drawing.Size(114, 26);
-            this.MskMaaş.TabIndex = 5;
-            this.MskMaaş.ValidatingType = typeof(int);
+            this.MskMaas.Location = new System.Drawing.Point(107, 166);
+            this.MskMaas.Mask = "0000";
+            this.MskMaas.Name = "MskMaas";
+            this.MskMaas.Size = new System.Drawing.Size(114, 26);
+            this.MskMaas.TabIndex = 5;
+            this.MskMaas.ValidatingType = typeof(int);
             // 
             // radioButton2
             // 
@@ -286,6 +286,7 @@
             this.BtnGuncelle.TabIndex = 5;
             this.BtnGuncelle.Text = "Güncelle";
             this.BtnGuncelle.UseVisualStyleBackColor = true;
+            this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
             // BtnSil
             // 
@@ -477,7 +478,7 @@
         private System.Windows.Forms.Button BtnKaydet;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.MaskedTextBox MskMaaş;
+        private System.Windows.Forms.MaskedTextBox MskMaas;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private PersonelVeriTabaniDataSet personelVeriTabaniDataSet;

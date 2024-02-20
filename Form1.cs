@@ -26,7 +26,7 @@ namespace DataProje1
             TxtAd.Text = "";
             TxtSoyad.Text = "";
             TxtMeslek.Text = "";
-            MskMaaş.Text = "";
+            MskMaas.Text = "";
             CmbSehir.Text = "";
             radioButton1.Checked = false;
             radioButton2.Checked = false;
@@ -49,7 +49,7 @@ namespace DataProje1
             komut.Parameters.AddWithValue("@p1",TxtAd.Text);
             komut.Parameters.AddWithValue("@p2",TxtSoyad.Text);
             komut.Parameters.AddWithValue("@p3",CmbSehir.Text);
-            komut.Parameters.AddWithValue("@p4",MskMaaş.Text);
+            komut.Parameters.AddWithValue("@p4",MskMaas.Text);
             komut.Parameters.AddWithValue("@p5",TxtMeslek.Text); 
             komut.Parameters.AddWithValue("@p6",label8.Text);
             komut.ExecuteNonQuery();
@@ -86,7 +86,7 @@ namespace DataProje1
             TxtAd.Text = dataGridView1.Rows[secilen].Cells[1].Value.ToString();
             TxtSoyad.Text = dataGridView1.Rows[secilen].Cells[2].Value.ToString();
             CmbSehir.Text = dataGridView1.Rows[secilen].Cells[3].Value.ToString();
-            MskMaaş.Text = dataGridView1.Rows[secilen].Cells[4].Value.ToString();
+            MskMaas.Text = dataGridView1.Rows[secilen].Cells[4].Value.ToString();
             label8.Text = dataGridView1.Rows[secilen].Cells[5].Value.ToString();
             TxtMeslek.Text = dataGridView1.Rows[secilen].Cells[6].Value.ToString();
 
@@ -112,6 +112,23 @@ namespace DataProje1
             komutsil.ExecuteNonQuery();
             baglanti.Close();
             MessageBox.Show("Kayıt Silindi");
+        }
+
+        private void BtnGuncelle_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+
+            SqlCommand komutgucelle = new SqlCommand("Update Tbl_Personel Set PerAd = @a1,PerSoyad = @a2, PerSehir = @a3, PerMaas = @a4, PerDurum = @a5, PerMeslek = @a6 where Perid = @a7", baglanti);
+            komutgucelle.Parameters.AddWithValue("@a1",TxtAd.Text);
+            komutgucelle.Parameters.AddWithValue("@a2", TxtSoyad.Text);
+            komutgucelle.Parameters.AddWithValue("@a3", CmbSehir.Text);
+            komutgucelle.Parameters.AddWithValue("@a4", MskMaas.Text);
+            komutgucelle.Parameters.AddWithValue("@a5", label8.Text);
+            komutgucelle.Parameters.AddWithValue("@a6", TxtMeslek.Text);
+            komutgucelle.Parameters.AddWithValue("@a7", Txtid.Text);
+            komutgucelle.ExecuteNonQuery();
+            baglanti.Close();
+            MessageBox.Show("Kayıt Güncellendi");
         }
     }
 }
