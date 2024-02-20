@@ -103,5 +103,15 @@ namespace DataProje1
                 radioButton2.Checked = true;
             }
         }
+
+        private void BtnSil_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            SqlCommand komutsil = new SqlCommand("Delete From Tbl_Personel Where Perid = @k1", baglanti);
+            komutsil.Parameters.AddWithValue("@k1",Txtid.Text);
+            komutsil.ExecuteNonQuery();
+            baglanti.Close();
+            MessageBox.Show("Kayıt Silindi");
+        }
     }
 }
