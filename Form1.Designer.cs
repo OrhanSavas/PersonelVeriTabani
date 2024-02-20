@@ -47,6 +47,7 @@
             this.Txtid = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.BtnGrafikler = new System.Windows.Forms.Button();
             this.Btnİstatistik = new System.Windows.Forms.Button();
             this.BtnTemizle = new System.Windows.Forms.Button();
             this.BtnGuncelle = new System.Windows.Forms.Button();
@@ -66,7 +67,6 @@
             this.personelVeriTabaniDataSet = new DataProje1.PersonelVeriTabaniDataSet();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tbl_PersonelTableAdapter = new DataProje1.PersonelVeriTabaniDataSetTableAdapters.Tbl_PersonelTableAdapter();
-            this.BtnGrafikler = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -250,6 +250,15 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "İşlemler";
             // 
+            // BtnGrafikler
+            // 
+            this.BtnGrafikler.Location = new System.Drawing.Point(35, 244);
+            this.BtnGrafikler.Name = "BtnGrafikler";
+            this.BtnGrafikler.Size = new System.Drawing.Size(129, 31);
+            this.BtnGrafikler.TabIndex = 8;
+            this.BtnGrafikler.Text = "Grafikler";
+            this.BtnGrafikler.UseVisualStyleBackColor = true;
+            // 
             // Btnİstatistik
             // 
             this.Btnİstatistik.Location = new System.Drawing.Point(35, 207);
@@ -335,6 +344,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(751, 165);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // peridDataGridViewTextBoxColumn
             // 
@@ -403,15 +413,6 @@
             // 
             this.tbl_PersonelTableAdapter.ClearBeforeFill = true;
             // 
-            // BtnGrafikler
-            // 
-            this.BtnGrafikler.Location = new System.Drawing.Point(35, 244);
-            this.BtnGrafikler.Name = "BtnGrafikler";
-            this.BtnGrafikler.Size = new System.Drawing.Size(129, 31);
-            this.BtnGrafikler.TabIndex = 8;
-            this.BtnGrafikler.Text = "Grafikler";
-            this.BtnGrafikler.UseVisualStyleBackColor = true;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -420,6 +421,7 @@
             this.label8.Size = new System.Drawing.Size(39, 15);
             this.label8.TabIndex = 4;
             this.label8.Text = "label8";
+            this.label8.TextChanged += new System.EventHandler(this.label8_TextChanged);
             // 
             // Form1
             // 
