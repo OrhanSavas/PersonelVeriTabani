@@ -51,6 +51,17 @@ namespace DataProje1
                 LblBekarPersonel.Text = dr3[0].ToString();
             }
             baglanti.Close();
+
+            //Şehir Sayısı
+
+            baglanti.Open();
+            SqlCommand komut4 = new SqlCommand ("Select Count(distinct(PerSehir)) From Tbl_Personel",baglanti);
+            SqlDataReader dr4 = komut4.ExecuteReader();
+            while (dr4.Read())
+            {
+                LblSehirSayisi.Text = dr4[0].ToString();
+            }
+            baglanti.Close();
         }
     }
 }
