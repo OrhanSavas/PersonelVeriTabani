@@ -53,6 +53,12 @@
     <Compile Include="FrmAnaForm.Designer.cs">
       <DependentUpon>FrmAnaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGiris.Designer.cs">
+      <DependentUpon>FrmGiris.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmGrafikler.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmAnaForm.resx">
       <DependentUpon>FrmAnaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGiris.resx">
+      <DependentUpon>FrmGiris.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmGrafikler.resx">
       <DependentUpon>FrmGrafikler.cs</DependentUpon>

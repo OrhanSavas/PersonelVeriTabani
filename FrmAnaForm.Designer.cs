@@ -420,11 +420,12 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(546, 287);
+            this.label8.Location = new System.Drawing.Point(707, 286);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(39, 15);
             this.label8.TabIndex = 4;
             this.label8.Text = "label8";
+            this.label8.Visible = false;
             this.label8.TextChanged += new System.EventHandler(this.label8_TextChanged);
             // 
             // FrmAnaForm
