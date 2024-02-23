@@ -130,5 +130,11 @@ namespace DataProje1
             baglanti.Close();
             MessageBox.Show("Kayıt Güncellendi");
         }
+
+        private void Btnİstatistik_Click(object sender, EventArgs e)
+        {
+            Frmistatistik fr = new Frmistatistik();
+            fr.Show();
+        }
     }
 }
