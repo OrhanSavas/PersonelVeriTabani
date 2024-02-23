@@ -62,6 +62,17 @@ namespace DataProje1
                 LblSehirSayisi.Text = dr4[0].ToString();
             }
             baglanti.Close();
+
+            //Toplam Maaş
+
+            baglanti.Open();
+            SqlCommand komut5 = new SqlCommand("Select Sum(PerMaas) From Tbl_Personel", baglanti);
+            SqlDataReader dr5 = komut5.ExecuteReader();
+            while (dr5.Read())
+            {
+                LblToplamMaas.Text = dr5[0].ToString();
+            }
+            baglanti.Close();
         }
     }
 }
